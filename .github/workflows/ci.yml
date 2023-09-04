@@ -15,4 +15,4 @@ jobs:
       - uses: isbang/compose-action@v1.5.1
         with:
           compose-file: "./docker-compose.yml"
-          #add comment
+          services: "app"
