@@ -11,8 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: isbang/compose-action@v1.5.1
+      - name: dockcker-compose
+        uses: isbang/compose-action@v1.5.1
         with:
           compose-file: "./docker-compose.yml"
-          services: "app"
+
+      - name: dockcker-compose
+        run: docker-compose up -d
